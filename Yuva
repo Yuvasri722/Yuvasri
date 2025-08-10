@@ -1,5 +1,5 @@
 def calculator():
-    # Get input values and operator
+    # Get input values operator
     num1, num2 = map(int, input("Enter two numbers separated by comma: ").split(','))
     operator = input("Enter operator (+, -, *, /, //, %, **, ^): ")
 
