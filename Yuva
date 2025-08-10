@@ -1,0 +1,44 @@
+def calculator():
+    # Get input values and operator
+    num1, num2 = map(int, input("Enter two numbers separated by comma: ").split(','))
+    operator = input("Enter operator (+, -, *, /, //, %, **, ^): ")
+
+    # Perform operation using match-case statement
+    match operator:
+        case '+':
+            result = num1 + num2
+            print(f"The Addition of {num1} and {num2} is {result}")
+        case '-':
+            result = num1 - num2
+            print(f"The Subtraction of {num1} and {num2} is {result}")
+        case '*':
+            result = num1 * num2
+            print(f"The Multiplication of {num1} and {num2} is {result}")
+        case '/':
+            if num2 != 0:
+                result = num1 / num2
+                print(f"The Division of {num1} by {num2} is {result}")
+            else:
+                print("Error: Division by zero is not allowed")
+        case '//':
+            if num2 != 0:
+                result = num1 // num2
+                print(f"The Floor Division of {num1} by {num2} is {result}")
+            else:
+                print("Error: Division by zero is not allowed")
+        case '%':
+            if num2 != 0:
+                result = num1 % num2
+                print(f"The Modulus of {num1} and {num2} is {result}")
+            else:
+                print("Error: Division by zero is not allowed")
+        case '**':
+            result = num1 ** num2
+            print(f"The Exponentiation of {num1} to the power {num2} is {result}")
+        case '^':
+            result = num1 ^ num2
+            print(f"The XOR of {num1} and {num2} is {result}")
+        case _:
+            print("Invalid operator")
+
+calculator()
